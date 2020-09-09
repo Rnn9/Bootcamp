@@ -1,28 +1,53 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <v-app>
+      <navbar />
+      <parallax />
+      <about />
+      <price />
+      <carousel />
+      <Map />
+    </v-app>
   </div>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from "./components/Navbar.vue";
+import Carousel from './components/Carousel.vue';
+import Parallax from "./components/Parallax.vue";
+import About from "./components/About";
+import Price from "./components/Price";
+import Map from "./components/Map";
 
 export default {
-  name: 'App',
+  name: "App",
+
   components: {
-    HelloWorld
-  }
-}
+    Navbar,
+    Carousel,
+    Parallax,
+    About,
+    Price,
+    Map,
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
 
-<style>
+
+<style scoped>
+@import "./assets/styles/main.css";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+@font-face {
+  font-family: 'Raleway', sans-serif;;
+  src: local('Raleway');
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: 'Raleway';
 }
 </style>
+
